@@ -12,5 +12,9 @@ jobs:
   Upload-Build-Artifact:
     runs-on: ubuntu-latest
     steps:
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.1.2
+      - name: First-Interaction
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: Message with markdown.\nThis is the message that will be displayed on users' first issue.
+          pr-message: Message that will be displayed on users' first pr. Look, a `code block` for markdown.
