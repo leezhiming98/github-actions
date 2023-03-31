@@ -1,0 +1,16 @@
+name: Add review template
+
+on:
+  pull_request:
+    types:
+      - labeled
+
+permissions:
+  contents: read
+  
+jobs:
+  Upload-Build-Artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifacts@3.1.2
