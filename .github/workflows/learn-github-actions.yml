@@ -13,6 +13,8 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: echo "🎉 ${{ github.ref_name }}"
-      - run: echo "🎉 ${{ github.head_ref }}"
       - run: echo "🎉 ${{ github.base_ref }}"
+      - if: ${{ github.base_ref == 'main' }}
+        run: echo "Main Condition"
+      - if: ${{ github.base_ref == 'demo' }}
+        run: echo "Demo Condition"
