@@ -1,6 +1,6 @@
 name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+on: [pull_request]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -11,3 +11,6 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - run: echo "🎉 ${{ github.ref_name }}"
+      - run: echo "🎉 ${{ github.head_ref }}"
+      - run: echo "🎉 ${{ github.base_ref }}"
