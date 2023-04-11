@@ -3,10 +3,10 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on:
   pull_request:
     branches: [main]
-    types: [reopened,closed]
+    types: [merged]
 jobs:
   check-bats-version:
-    if: ${{ github.event.pull_request.merged }}
+    #if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
