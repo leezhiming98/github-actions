@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  delete-workflow-runs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete Workflow Runs
+        uses: leezhiming98/delete-workflow-runs@v1.5
+        with:
+          repo: github-actions
+          branch: demo
