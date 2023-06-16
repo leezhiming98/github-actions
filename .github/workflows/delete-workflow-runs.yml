@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@v1.2
+        uses: leezhiming98/delete-workflow-runs@v1.3
         with:
           repo: github-actions
           branch: demo
