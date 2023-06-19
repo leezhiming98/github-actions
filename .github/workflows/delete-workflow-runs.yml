@@ -4,7 +4,7 @@ name: Delete Workflow Runs
 
 on:
   schedule:
-    - cron: "10 18 * * *"
+    - cron: "13 18 * * *"
     #"0 0 * * 1" # weekly
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
       actions: write
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@main
+        uses: leezhiming98/delete-workflow-runs@v1.9
         with:
           token: ${{ github.token }}
           owner: leezhiming98
