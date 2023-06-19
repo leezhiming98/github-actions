@@ -1,10 +1,10 @@
 name: Delete Workflow Runs
 
-#on: [push]
+on: [push]
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"
 
 jobs:
   delete-workflow-runs:
@@ -19,7 +19,7 @@ jobs:
           owner: leezhiming98
           repo: github-actions
           branch_type: all
-          retain_days: 100
+          retain_days: 80
 ###
 # branch_type - protected|unprotected|all
 # call the workflow once, if all branches having the same retain days
