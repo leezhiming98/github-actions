@@ -4,8 +4,7 @@ name: Delete Workflow Runs
 
 on:
   schedule:
-    - cron: "13 18 * * *"
-    #"0 0 * * 1" # weekly
+    - cron: "0 0 * * *"
 
 jobs:
   delete-workflow-runs:
