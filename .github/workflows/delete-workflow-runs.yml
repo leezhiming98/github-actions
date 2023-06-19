@@ -20,7 +20,7 @@ jobs:
           owner: leezhiming98
           repo: github-actions
           branch_type: all
-          retain_days: 80
+          retain_days: 100
 ###
 # branch_type - protected|unprotected|all
 # call the workflow once, if all branches having the same retain days
