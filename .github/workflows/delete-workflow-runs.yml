@@ -3,9 +3,13 @@ on: [push]
 jobs:
   delete-workflow-runs:
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@v1.5
+        uses: leezhiming98/delete-workflow-runs@v1.7
         with:
+          token: ${{ github.token }}
+          owner: leezhiming98
           repo: github-actions
-          branch: demo
+          retain_days: 80
