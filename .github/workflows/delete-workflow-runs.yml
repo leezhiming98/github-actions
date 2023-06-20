@@ -13,16 +13,16 @@ jobs:
       actions: write
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@v1.9
+        uses: leezhiming98/delete-workflow-runs@main
         with:
           token: ${{ github.token }}
           owner: leezhiming98
-          repo: github-actions
+          repo: test
           branch_type: all
-          retain_days: 120
+          retain_days: 100
 ###
 # branch_type - protected|unprotected|all
-# call the workflow once, if all branches having the same retain days
+# call the workflow once, if all branches having the same retain days or if only one branch type is calling the workflow
 # eg. all - 30 days
 # call the workflow twice, if protected and unprotected branches having different retain days
 # eg. protected - 30 days | unprotected - 7 days
