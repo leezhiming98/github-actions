@@ -17,7 +17,7 @@ jobs:
         with:
           token: ${{ github.token }}
           owner: leezhiming98
-          repo: test
+          repo: github-actions
           branch_type: all
           retain_days: 100
 ###
