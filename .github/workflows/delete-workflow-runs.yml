@@ -13,7 +13,7 @@ jobs:
       actions: write
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@main
+        uses: leezhiming98/delete-workflow-runs@v1.9.1
         with:
           token: ${{ github.token }}
           owner: leezhiming98
