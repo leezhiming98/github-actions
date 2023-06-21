@@ -17,7 +17,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUBACTIONS_PAT }}
           branch_type: all
-          retain_days: 100
+          retain_days: 80
 ###
 # branch_type - protected|unprotected|all
 # call the workflow once, if all branches having the same retain days or if only one branch type is calling the workflow
