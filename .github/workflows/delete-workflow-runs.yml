@@ -13,7 +13,7 @@ jobs:
       actions: write
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@v2.0.1
+        uses: leezhiming98/delete-workflow-runs@v2.0.2
         with:
           token: ${{ secrets.GITHUBACTIONS_PAT }}
           branch_type: all
