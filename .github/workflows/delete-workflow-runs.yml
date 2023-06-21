@@ -13,11 +13,11 @@ jobs:
       actions: write
     steps:
       - name: Delete Workflow Runs
-        uses: leezhiming98/delete-workflow-runs@v2.0.2
+        uses: leezhiming98/delete-workflow-runs@v2.0.3
         with:
           token: ${{ secrets.GITHUBACTIONS_PAT }}
-          branch_type: all
-          retain_days: 82
+          branch_type: protected
+          retain_days: 100
 ###
 # branch_type - protected|unprotected|all
 # call the workflow once, if all branches having the same retain days or if only one branch type is calling the workflow
