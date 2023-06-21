@@ -1,10 +1,10 @@
 name: Delete Workflow Runs
 
-#on: [push]
+on: [push]
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
+# on:
+#   schedule:
+#     - cron: "0 0 * * *"
 
 jobs:
   delete-workflow-runs:
@@ -15,9 +15,7 @@ jobs:
       - name: Delete Workflow Runs
         uses: leezhiming98/delete-workflow-runs@v1.9.1
         with:
-          token: ${{ github.token }}
-          owner: leezhiming98
-          repo: github-actions
+          token: ${{ secrets.GITHUBACTIONS_PAT }}
           branch_type: all
           retain_days: 100
 ###
